@@ -1,0 +1,14 @@
+$binary?=@./build/zephyr/zephyr.elf
+
+mach create
+machine LoadPlatformDescription @platforms/cpus/stm32f4.repl
+
+# UART3 is the zephyr console on stm32f4
+showAnalyzer sysbus.usart3
+
+macro reset
+"""
+    sysbus LoadELF $binary
+"""
+
+runMacro $reset
