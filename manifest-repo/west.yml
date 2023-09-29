@@ -2,14 +2,11 @@ manifest:
   remotes:
     - name: zephyr-kernel
       url-base: https://github.com/zephyrproject-rtos
-    - name: zephyr-stm32
-      url-base: git@github.com:anuraj-rp/zephyr-stm32.git
   projects:
     - name: zephyr-kernel
       remote: zephyr-kernel
       revision: v3.4.0
       import: true
-    - name: ex1
   self:
     path: manifest-repo
 
