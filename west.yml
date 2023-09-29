@@ -3,7 +3,7 @@
 
 manifest:
   self:
-    path: app
+    path: example_apps
     west-commands: scripts/west-commands.yml
 
   remotes:
@@ -13,7 +13,7 @@ manifest:
   projects:
     - name: zephyr
       remote: zephyrproject-rtos
-      path: zephry-kernel
+      path: zephyr-kernel
       revision: main
       import:
         # By using name-allowlist we can clone only the modules that are
